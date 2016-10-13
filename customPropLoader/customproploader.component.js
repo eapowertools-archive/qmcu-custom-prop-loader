@@ -336,7 +336,7 @@
 
         model.openHelp = function() {
             ngDialog.open({
-                template: "plugins/customproploader/help-dialog.html",
+                template: "plugins/customPropLoader/help-dialog.html",
                 className: "help-dialog",
                 controller: customPropController,
                 scope: $scope
@@ -346,7 +346,7 @@
 
     module.component("custompropLoaderBody",
     {
-        templateUrl: "plugins/customproploader/customprop-loader-body.html",
+        templateUrl: "plugins/customPropLoader/customprop-loader-body.html",
         bindings:
         {
             customPropName: "<",

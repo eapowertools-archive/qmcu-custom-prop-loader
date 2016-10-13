@@ -1,9 +1,9 @@
-.navbar-fixed-top
+.customPropLoader .navbar-fixed-top
 {
     margin-left:250px;
 }
 
-#page-content-header-cp {
+.customPropLoader #page-content-header {
     background:#404040;
     top:0;
     height:69px;
@@ -12,13 +12,13 @@
     z-index:1000;
 }
 
-#page-content-body-cp {
+.customPropLoader #page-content-body {
     margin-top: 108px;
     margin-bottom: 50px;
     margin-right:15px;
 }
 
-.title-cp {
+.customPropLoader .title {
     color: rgba(255,255,255,0.8);
     float:left;
     font-size: 36px;
@@ -26,65 +26,71 @@
     padding-left:15px;
 }
 
-#mandatory {
+.customPropLoader #mandatory {
     margin-bottom:10px;
 }
 
-#btn-support
+.customPropLoader #btn-support
 {
     float:right;
     margin-top: 20px;
     margin-right:100px;
 }
 
-.help-text
+.customPropLoader .help-text
 {
     line-height: normal;
 }
 
-.panel-heading {
+.customPropLoader .panel-heading {
     background-color: #535D5A;
     border-color: #535D5A;
 }
-.panel-primary {
+
+.customPropLoader .panel-primary {
     border-color: #535D5A;
 }
-.panel-primary > .panel-heading {
+
+.customPropLoader .panel-primary > .panel-heading {
   color: #fff;
   background-color: #535D5A;
   border-color: #535D5A;
 }
-.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+
+.customPropLoader .panel-primary > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #535D5A;
 }
-.panel-primary > .panel-heading .badge {
+
+.customPropLoader .panel-primary > .panel-heading .badge {
   color: #535D5A;
   background-color: #fff;
 }
-.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+
+.customPropLoader .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #535D5A;
 }
 
-.ng-invalid {
+.customPropLoader .ng-invalid {
     border-left: 5px solid rgb(169, 68, 66);
 }
 
-.ng-valid[required] {
+.customPropLoader .ng-valid[required] {
     border-left: 5px solid rgb(66, 169, 72);
 }
 
-#customPropForm
+.customPropLoader #customPropForm
 {
     border-left: none;
 }
-.btn[disabled]
+
+.customPropLoader .btn[disabled]
 {
   background-color: #eee;
   color: #aaa;
   border-color: #ccc;
 }
 
- #cptable {
+.customPropLoader #cptable {
             width: 100%;
         }
 
@@ -113,7 +119,7 @@
         }
 
 
-.success-message
+.customPropLoader .success-message
 {
     word-wrap: break-word;
 }
