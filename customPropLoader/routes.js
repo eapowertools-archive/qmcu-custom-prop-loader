@@ -21,7 +21,7 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(autoReap);
 autoReap.options.reapOnError= true;
-//router.use('/upload', express.static(config.thisServer.pluginPath + "/customproploader/uploads"));
+//router.use('/upload', express.static(config.thisServer.pluginPath + "/customPropLoader/uploads"));
 
 router.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -30,7 +30,7 @@ router.use(function(req, res, next) {
 });
 
 
-var destDir = path.join(config.thisServer.pluginPath, "customproploader/uploads/");
+var destDir = path.join(config.thisServer.pluginPath, "customPropLoader/uploads/");
 var upload = multer({ dest: destDir});
 router.post('/upload', upload.array('file', 1) , function (req, res) 
 {
