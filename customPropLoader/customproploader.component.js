@@ -106,7 +106,7 @@
 
     };
 
-    function customPropController($scope, $http, $timeout, ngDialog, Upload) {
+    function customPropController($scope, $http, $timeout, ngDialog, Upload, qmcuWindowLocationService) {
         var model = this;
         model.resources1 = [];
         model.resources2 = [];
@@ -123,7 +123,7 @@
         model.updateProp = false;
         model.propExists = false;
         model.uploadMessage = null;
-
+        model.host = qmcuWindowLocationService.host;
 
         model.$onInit = function() {
             fetchResources($http)
@@ -289,7 +289,7 @@
             existingProps: "<"
         },
         controllerAs: "model",
-        controller: ["$scope", "$http", "$timeout", "ngDialog", "Upload", customPropController]
+        controller: ["$scope", "$http", "$timeout", "ngDialog", "Upload", "qmcuWindowLocationService", customPropController]
     });
 
 }());
