@@ -1,5 +1,8 @@
 {
-    "title":"Custom Property Bulk Loader",
-    "pluginDir":"customPropLoader",
-    "stage":"beta"
+    "title": "Custom Property Bulk Loader",
+    "pluginDir": "customPropLoader",
+    "clientFiles": [
+        "plugins/customPropLoader/customPropLoader.component.js",
+        "plugins/customPropLoader/css/customPropLoader.css"
+    ]
 }
