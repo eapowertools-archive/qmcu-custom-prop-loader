@@ -1,1 +1,1 @@
-xcopy customPropLoader\node_modules ..\QlikSenseQMCUtility\plugins\customPropLoader\node_modules /I /Y /R /S
+xcopy customPropLoader\node_modules ..\..\QlikSenseQMCUtility\plugins\customPropLoader\node_modules /I /Y /R /S
