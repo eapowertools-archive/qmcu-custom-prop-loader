@@ -9,29 +9,38 @@ var config = require('./config')
 var multer = require('multer');
 var autoReap = require('multer-autoreap');
 
-var qrsConfig = {
-    hostname: config.qrs.hostname,
-    localCertPath: config.qrs.localCertPath,
-    headers: {
-        "Cookie": "",
-        "Content-Type": "application/json"
-    }
-};
+var qrsConfig;
+
+if (!config.thisServer.devMode) {
+    qrsConfig = {
+        hostname: config.qrs.hostname,
+        localCertPath: config.qrs.localCertPath,
+        headers: {
+            "Cookie": "",
+            "Content-Type": "application/json"
+        }
+    };
+} else {
+    qrsConfig = {
+        hostname: config.qrs.hostname,
+        localCertPath: config.qrs.localCertPath
+    };
+}
 
 var qrs = new qrsInteract(qrsConfig);
 
+if (!config.thisServer.devMode) {
+    router.use(function(req, res, next) {
+        // console.log("session cookie in use: " + sessionName[0].sessionCookieHeaderName);
+        // console.log("cookie to be used: " + cookies[0]);
+        if (req.proxyPath.length !== 0) {
+            qrs.UpdateVirtualProxyPrefix(req.proxyPath.replace("/", ""));
+        }
+        qrs.UseCookie(req.sessionCookieToUse);
 
-router.use(function(req, res, next) {
-    // console.log("session cookie in use: " + sessionName[0].sessionCookieHeaderName);
-    // console.log("cookie to be used: " + cookies[0]);
-    if (req.proxyPath.length !== 0) {
-        qrs.UpdateVirtualProxyPrefix(req.proxyPath.replace("/", ""));
-    }
-    qrs.UseCookie(req.sessionCookieToUse);
-
-    next();
-})
-
+        next();
+    })
+}
 
 
 router.use(bodyParser.json());
