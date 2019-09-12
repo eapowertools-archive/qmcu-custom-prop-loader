@@ -9,7 +9,7 @@ The Custom Property Bulk Loader facilitates the creation and update of custom pr
 ## How it works
 The Custom Property Bulk Loader is made to resemble the custom property page in the Qlik Sense QMC.  However, it has one key difference; the ability to upload a csv file containing the values for the custom property.
 
-![1](https://s3.amazonaws.com/eapowertools/qmcutilities/CustomPropLoader.png)
+![1](https://github.com/eapowertools/QlikSenseQMCUtility/wiki/imgs/CustomPropLoader.png)
 
 1. With the bulk loader, the user picks an existing custom property to update, or enters a name in the text box to create a new custom property.
 2. Select the resources the custom property will apply to just like in the QMC page.
