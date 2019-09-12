@@ -3,10 +3,10 @@
 
 # qmcu-custom-prop-loader
 
-##What it does
+## What it does
 The Custom Property Bulk Loader facilitates the creation and update of custom properties using a csv file to populate custom property values.
 
-##How it works
+## How it works
 The Custom Property Bulk Loader is made to resemble the custom property page in the Qlik Sense QMC.  However, it has one key difference; the ability to upload a csv file containing the values for the custom property.
 
 ![1](https://s3.amazonaws.com/eapowertools/qmcutilities/CustomPropLoader.png)
